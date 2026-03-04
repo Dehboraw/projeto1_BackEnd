@@ -16,20 +16,43 @@ Imagine que você abriu uma loja:
 const produtos = ["Camiseta", "Calça", "Tênis", "Bermuda", "Boné", "Oculos", "Vestido", "Moletom"]
 const valorProdutos = [25 ,      80,     150,       60,      25,      40,      100,       120    ]
 
-function mostrarProduto_preco() {
+function mostrarEstoque() {
+    console.log(" ## ESTOQUE ## ")
     let indice = 0
     while(indice < produtos.length){
         console.log(produtos[indice] + " - R$" + valorProdutos[indice])
         indice++
     }
-
+    console.log("-----------------------------")
 }
-mostrarProduto_preco()
+//mostrarEstoque()
+
 //receber os itens
 function adicionarProduto(novoproduto, novopreco){
-    let produtos = novoproduto
-    let valorProdutos = novopreco
-    return
+    produtos.push(novoproduto)
+    valorProdutos.push(novopreco)
+    console.log("Novo produto: " + novoproduto)
+    console.log("-----------------------------")
 }
 
-console.log("", 50)
+//adicionarProduto("Meia", 10)
+
+//mostrarEstoque()
+
+function removerProduto(indiceremovido){
+    produtos.splice(indiceremovido, 1)
+    valorProdutos.splice(indiceremovido, 1)
+    console.log("Produto removido: " + produtos[indiceremovido])
+    console.log("-----------------------------")
+}
+
+
+mostrarEstoque()
+
+adicionarProduto("Meia", 10)
+
+mostrarEstoque()
+
+removerProduto(0)
+
+mostrarEstoque()
