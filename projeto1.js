@@ -40,9 +40,10 @@ function adicionarProduto(novoproduto, novopreco){
 //mostrarEstoque()
 
 function removerProduto(indiceremovido){
+    console.log("Removendo: " + produtos[indiceremovido])
     produtos.splice(indiceremovido, 1)
     valorProdutos.splice(indiceremovido, 1)
-    console.log("Produto removido: " + produtos[indiceremovido])
+    console.log("Produto removido com sucesso")
     console.log("-----------------------------")
 }
 
